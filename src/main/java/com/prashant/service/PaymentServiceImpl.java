@@ -26,5 +26,11 @@ public class PaymentServiceImpl implements PaymentService{
 		return new Random().nextBoolean() ? "success": "false";
 	}
 
+	@Override
+	public Payment findOrder(String orderId) {
+		
+		return dao.findByOrderId(orderId);
+	}
+
 
 }

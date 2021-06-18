@@ -8,4 +8,6 @@ import com.prashant.model.Payment;
 @Repository
 public interface PaymentDao extends JpaRepository<Payment, Integer>{
 
+	Payment findByOrderId(String orderId);
+
 }

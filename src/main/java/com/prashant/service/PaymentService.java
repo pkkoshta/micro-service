@@ -6,4 +6,6 @@ public interface PaymentService {
 	
 	public Payment savePay(Payment payment);
 
+	public Payment findOrder(String orderId);
+
 }
