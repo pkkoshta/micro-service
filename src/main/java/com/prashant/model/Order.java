@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Table(name="order_tb")
 public class Order {
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Integer oId;
 	private String amount;
 	private String productName;
@@ -22,7 +21,8 @@ public class Order {
 
 
 
-	public Order(String amount, String productName, String orderId) {
+	public Order(int id, String amount, String productName, String orderId) {
+		this.oId = id;
 		this.amount = amount;
 		this.productName = productName;
 		this.orderId = orderId;
